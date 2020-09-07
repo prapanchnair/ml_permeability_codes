@@ -1,0 +1,30 @@
+This supplementary folder contains sample codes to generate the data used in the 
+paper " Can Minkowki tensors of a porous microstructure characterize its
+permeability."
+
+Gerenation of shapes:
+
+The random shapes used for obstacles in the porous media can be generated using 
+the Jupyter notebook file, generate_shapes.ipynb. To use this notebook, the 
+'shapes.py' file should be present in the same directory. 
+
+Flow simulations: 
+
+The simulations of flows around the obstacles can be run using the notebook file
+'cfdsimulate.ipynb'. To use this notebook, the finite volume solver called 
+Gerris needs to be installed in the system. 
+
+Computing permeabilities:
+
+The flow data can then be used to compute the permeability of each of the porous
+media by fitting a polynomial on the superficial velocity. This can be achieved
+by using the notebook 'compute_permeabilities.ipynb.'
+
+Training the Deep neural network:
+
+The data set used in the paper, generated using the functions mentioned above 
+are consolidated in the folder m1, m2 and m3. The Deep Neural Network training 
+can be performed on this data using the notebook file 'K_fit.ipynb'. All the 
+hyperparameters used for the neural network training can be set here. The 
+folders m1, m2 and m3 contain the shape information and the corresponding 
+permeability values. 
